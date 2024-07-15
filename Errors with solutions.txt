@@ -1,0 +1,9 @@
+Error 1: SSL: CERTIFICATE_VERIFY_FAILED
+
+Solution: 
+
+Approach 1: Disable the verify
+r = requests.get('https://api.github.com/events', verify=False)
+Error we got: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+
+To fix the above issue:
